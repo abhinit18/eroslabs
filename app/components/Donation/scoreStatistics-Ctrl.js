@@ -8,8 +8,10 @@ App.controller('StatsController', function ($scope, $http, $cookies, $cookieStor
         if($scope.DonationValue == null || $scope.DonationValue == undefined){
             alert("Please enter the donation ammount.")
         }else{
-            var value = 0;
-            $('#progress-bar').css('width',$scope.DonationValue*2).attr('aria-valuenow',$scope.DonationValue);
+             var maxValue,allotedValue;
+            maxValue = 200;
+            allotedValue = ($scope.DonationValue/maxValue)*100;
+            $('#progress-bar').css('width',allotedValue+"%").attr('aria-valuenow',$scope.DonationValue);
         }
     };
 //    ======================================= New Chart ==================================== //
