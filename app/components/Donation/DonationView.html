@@ -1,0 +1,45 @@
+<section >
+    <div class="DonateWidget" style="margin-top:10%;z-index: 99999999;">
+        <div class="DonationBar">
+            <div class="progress-bar progress-bar-stripped active" id="progress-bar"
+                 data-toggle="tooltip" title="${{200-DonationValue}} still needed for this project"
+                role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="200"
+                style="width:0%">&nbsp;</div>
+        </div>
+        <div class="texted full-width">
+            <h5 class="text-center"><b>
+                <span class="text-danger">Only 3 days left</span> to fund this project
+            </b></h5>
+            <h6 class="padded-text">
+
+                    Join the <b>42</b>
+                other donors who have already supported this project.Every Dollar helps.
+            </h6>
+        </div>
+        <div class="full-width text-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-input">
+                <i class="fa fa-usd pos-set" aria-hidden="true" ></i>
+                <input type="number" max="200" min="10" class="form-control" required ng-model="DonationValue">
+                <h5 class="text-left fon-italics">
+                    <a href="javascript:void(0);">Why give $50?</a>
+                </h5>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <button type="button" ng-click="SubmitValue()" class="btn btn-success btn-lg">Give Now</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="DonationWidgetSuggestionBtn text-center">
+        <div class="sugeestionBtn">
+            <a href="javascript:void(0)" class="btn btn-default">Save for later</a>
+            <a href="javascript:void(0)" class="btn btn-default">Tell your friends</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
